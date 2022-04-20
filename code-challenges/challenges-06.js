@@ -64,11 +64,11 @@ var reverce = [];
 const reverseArray = (arr3)=>{
     for (let i = 5 - 1; i >= 0; i--) {
     
-        arr3.push(arr3[i]);
+        reverce.push(arr3[i]);
     }
-    return arr3
+    return reverce
 }
-console.log(arr3);
+console.log(reverseArray(arr3));
 
 
 
