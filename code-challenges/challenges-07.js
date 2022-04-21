@@ -19,21 +19,21 @@
 //  Note that:
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
 //  2- The first letters of the firstName and lastName should be capital letter
-var second_Person = {
-    firstName: "Jane",
-    lastName: "Doe",
-    age: 33,
-    hobby: "Campaign",
-  };
+// var first_Person = {
+//     firstName: "Jane",
+//     lastName: "Doe",
+//     age: 33,
+//     hobby: "Campaign",
+//   };
   let message;
 const objLat = (obj) => {
-    message=("my name is "+first_Person.firstName.trim().replace(/^\w/, (c) => c.toUpperCase())
-    +" "+first_Person.lastName.trim().replace(/^\w/, (c) => c.toUpperCase())
-    +" "+"I am "+first_Person.age+" YO, and I love "+first_Person.hobby+"."+""
+    message=("my name is "+obj.firstName.trim().replace(/^\w/, (c) => c.toUpperCase())
+    +" "+obj.lastName.trim().replace(/^\w/, (c) => c.toUpperCase())
+    +" "+"I am "+obj.age+" YO, and I love "+obj.hobby+"."+""
     );
     return message;
 };
-objLat(second_Person);
+// objLat(first_Person);
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
