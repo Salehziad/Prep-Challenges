@@ -19,12 +19,7 @@
 //  Note that:
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
 //  2- The first letters of the firstName and lastName should be capital letter
-// var first_Person = {
-//     firstName: "Jane",
-//     lastName: "Doe",
-//     age: 33,
-//     hobby: "Campaign",
-//   };
+
   let message;
 const objLat = (obj) => {
     message=("my name is "+obj.firstName.trim().replace(/^\w/, (c) => c.toUpperCase())
@@ -33,7 +28,8 @@ const objLat = (obj) => {
     );
     return message;
 };
-// objLat(first_Person);
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
