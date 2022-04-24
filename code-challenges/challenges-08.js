@@ -26,12 +26,14 @@
 // Output:
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
-  // write your code here
-  let customerInfo=[];
-  for(const property in obj){
+// write your code here
+const customerAndAge = (obj) => {
+  let customerInfo = [];
+  for (const property in obj) {
     customerInfo.push(`Customer Name :${property} , Age :${obj[property]}`);
+    return customerInfo;
   }
-  return customerInfo;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -68,8 +70,7 @@ const getEntries = (obj) => {
 // first one is containing the names of all of the courses in the data set.
 // second one is containing the names of all the students
 
-const courses = [
-  {
+const courses = [{
     course: 'Java',
     Instructor: 'David',
     Students: ['Lincoln', 'Ruth', 'Briana', 'Suzy', 'Greta'],
@@ -100,7 +101,10 @@ const getInfo = (arr) => {
   let studentsName = [];
   // write your code here
 
-  return { coursesName, studentsName };
+  return {
+    coursesName,
+    studentsName
+  };
 };
 // -------------------------------------------------------------------------------------------------------
 
