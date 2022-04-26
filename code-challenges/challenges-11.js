@@ -57,11 +57,14 @@ function square(arr) {
 //
 // Output: ['Adam Anderson', 'Ben Zeller', 'Peter Mccord', 'Fred Sagar', 'Nathan Weiss']
 
+
 function fullName(arr) {
     // write your code here
-    let userNames = arr.map(function(element){
-        return `${element.firstName} ${element.lastName}`;
+     let userNames = arr.map(y =>`${y.firstName} ${y.lastName}`)
+         return userNames;
 }
+
+    
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -204,4 +207,9 @@ function studentsResult(arr) {
 }
 // -------------------------------------------------------------------------------------------------------
 
-module.exports = { square, fullName, gradesAvg, studentsResult };
+module.exports = {
+    square,
+    fullName,
+    gradesAvg,
+    studentsResult
+};
