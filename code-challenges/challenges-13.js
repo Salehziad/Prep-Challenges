@@ -40,7 +40,13 @@
 
 const objectCounter = (obj) => {
     // write your code here
-
+    let votes = 1;
+    const objArray = obj.reduce(
+     (prevValue, currValue) => {if(prevValue!=currValue)
+        votes++;
+}
+);
+return votes;
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -58,10 +64,18 @@ const objectCounter = (obj) => {
 // you learnt before to split the string to words
 //
 // ------------------------
-
 const stringReverse = (str) => {
     // write your code here
-
+    let words=str.split(" ");
+    let reversedWords=words.reverse();
+    let result="";
+    reversedWords.reduce((previousValue,currentValue)=>{
+        if(previousValue!=null)
+        result+=previousValue;
+        if(currentValue!=null)
+        result+=" "+currentValue;
+    })
+    return result;
 }
 // -------------------------------------------------------------------------------------------------------
 
