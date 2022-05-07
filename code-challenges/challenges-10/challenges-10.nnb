@@ -24,9 +24,20 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function birthdayCakeCandles(candles) {\n    // Write your code here\n  let max = Math.max.apply(null, candles);\n  let totalTallCandles = candles.reduce((next, before) => {\n    if (before == max) {\n      next += 1;\n    }\n    return next;\n  }, 0);\n  return totalTallCandles;\n}87"
             ],
-            "outputs": []
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m87\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "language": "markdown",
