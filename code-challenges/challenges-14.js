@@ -24,11 +24,9 @@
 //
 
 const LastWord = (str) => {
-    // write your code here
+        var n = str.split(" ");
+        return n[n.length - 1];
     
-      let index1= ( str.lastIndexOf(" ") + 1);
-      let index2= ( str.lastIndexOf("") );
-      return str.slice(index1,index2);
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -43,8 +41,8 @@ const LastWord = (str) => {
 
 const LastWord_2 = (str) => {
     // write your code here
-    let arr=str.split(" ");
-    return arr[arr.length-1];
+    var n = str.split(" ");
+    return n[n.length - 1];
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -67,24 +65,9 @@ const LastWord_2 = (str) => {
 //
 
 const replaceWords = (str) => {
-    // write your code here4
-    let arr=str.split(" ");
-    let indexOfI=arr.indexOf("I");
-    let indexOfAm=arr.indexOf("am");
-    let indexOfWas=arr.indexOf("was");
-    if(indexOfI!=-1)
-    arr.splice(indexOfI,1,"We");
-    if(indexOfAm!=-1)
-    arr.splice(indexOfAm,1,"are");
-    if(indexOfWas!=-1)
-    arr.splice(indexOfWas,1,"were");
-    let result="";
-    for(let i=0;i<=arr.length-1;i++){
-        result+=arr[i];
-        if (i!=arr.length-1)
-        result+=" ";
-    }
-    return result;
+    // write your code here
+    var newString = str.replace(/i|is/gi, "hard");
+    return(newString);
 }
 // -------------------------------------------------------------------------------------------------------
 
