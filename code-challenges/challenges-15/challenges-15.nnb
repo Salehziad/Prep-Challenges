@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function minOperation(arr, n) {\n\n    let example = new Map();\n \n    for (let i = 0; i < n; i++)\n        if (example.has(arr[i]))\n            example.set(arr[i], example.get(arr[i]) + 1);\n        else example.set(arr[i], 1);\n \ny\n    let count = 0;\n    let s = example.keys();\n \n    for (let i of s)\n        if (count < example.get(i))\n            count = example.get(i);\n \n\n    return (n - count);\n}"
+                "function equalizeArray(arr) {\n    let n = arr.length;\nlet example = new Map();\n\nfor (let i = 0; i < n; i++)\n    if (example.has(arr[i]))\n        example.set(arr[i], example.get(arr[i]) + 1);\n    else example.set(arr[i], 1);\n\n\nlet count = 0;\nlet s = example.keys();\n\nfor (let i of s)\n    if (count < example.get(i))\n        count = example.get(i);\n\n\nreturn (n - count);\n\n}"
             ],
             "outputs": []
         },
