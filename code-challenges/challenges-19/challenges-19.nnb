@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "process.stdin.resume();\nprocess.stdin.setEncoding('ascii');\n\nvar input_stdin = \"\";\nvar input_stdin_array = \"\";\nvar input_currentline = 0;\n\nprocess.stdin.on('data', function (data) {\n    input_stdin += data;\n});\n\nprocess.stdin.on('end', function () {\n    input_stdin_array = input_stdin.split(\"\\n\");\n    main();    \n});\n\nfunction readLine() {\n    return input_stdin_array[input_currentline++];\n}\n\n/////////////// ignore above this line ////////////////////\n\nfunction main() {\n    var s = readLine();\n    var t = readLine();\n    var k = parseInt(readLine());\n    \n    for (var i=0; i < s.length; i++) {\n        if (s[i] != t[i]) {\n            break;\n        }\n    }\n    \n    var deletesRequired = s.length - i;\n    var addsRequired = t.length - i;\n    var minRequired = deletesRequired + addsRequired;\n    var max = s.length + t.length;\n    \n    if (k < minRequired || ((k % 2 != minRequired % 2) && k < max)) {\n        console.log(\"No\");\n    } else {\n        console.log(\"Yes\");\n    }\n\n}"
             ],
             "outputs": []
         },
